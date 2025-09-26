@@ -1,4 +1,4 @@
-  # Task 4 — Setup and Use a Firewall (Windows)
+# Task 4 — Setup and Use a Firewall (Windows)
 
 **Author:** Likhith Bharadwaj Reddy  
 
@@ -6,14 +6,14 @@
 
 ##  Objective
 Configure the Windows Defender Firewall to **block Telnet (port 23)** while ensuring that **SSH (port 22)** remains allowed.  
-This involves creating, verifying, testing, and finally removing firewall rules.
+The task involves creating, verifying, testing, and finally removing firewall rules using PowerShell.
 
 ---
 
 ##  Deliverables
 - `commands/firewall-commands-windows.txt` — all PowerShell commands used  
 - `exports/firewall-config.wfw` — exported Windows firewall configuration (optional)  
-- `README.md` — documentation of the process  
+- `README.md` — documentation of the process (includes report section)  
 
 ---
 
