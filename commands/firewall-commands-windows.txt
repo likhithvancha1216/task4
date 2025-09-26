@@ -1,0 +1,19 @@
+# Task 4 — Firewall Commands (Windows)
+
+# 1. Allow SSH (port 22) inbound
+New-NetFirewallRule -DisplayName "Allow SSH" -Direction Inbound -LocalPort 22 -Protocol TCP -Action Allow
+
+# 2. Block Telnet (port 23) inbound
+New-NetFirewallRule -DisplayName "Block Telnet Port 23" -Direction Inbound -LocalPort 23 -Protocol TCP -Action Block
+
+# 3. Verify the block rule
+Get-NetFirewallRule -DisplayName "Block Telnet Port 23" | Format-List *
+
+# 4. Test Telnet connectivity (expected to fail)
+Test-NetConnection -ComputerName <server-ip> -Port 23
+
+# 5. Remove the Telnet block rule
+Remove-NetFirewallRule -DisplayName "Block Telnet Port 23"
+
+# 6. Export firewall configuration (optional)
+netsh advfirewall export "C:\Users\<YourUser>\Documents\firewall-config.wfw"
